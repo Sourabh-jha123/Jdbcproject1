@@ -49,13 +49,13 @@ public void viewpatients(){
             System.out.println("Patient: ");
             System.out.println("+-----------+--------------+-----------+-------+");
             System.out.println("| Patient Id | Name               |Age        |Gender      |");
-            System.out.println("+-----------+--------------+-----------+-------+");
+            System.out.println("+-----------+--------------+-----------+------------+");
             while(resultSet.next()){
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
                 String gender = resultSet.getString("gender");
-                System.out.printf("|%-13s|%-21s|%-11s|%-12s|\n",id, name, gender);
+                System.out.printf("|%-13s|%-21s|%-11s|%-12s|\n",id, age, name, gender);
                 System.out.println("+-----------+--------------+-----------+-------+");
             }
 
